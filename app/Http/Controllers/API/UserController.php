@@ -48,6 +48,8 @@ class UserController extends Controller
                 (new ImageService)->updateImage($user, $request, '/images/users/', 'update');
             }
 
+            $user->fill($request->validated());
+            
             $user->first_name = $request->first_name;
             $user->last_name = $request->last_name;
             $user->location = $request->location;
