@@ -20,7 +20,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('users/{user_id}/deleteAll/results', [ResultController::class, 'destroyAll'])->name('destroyAll');
 
 
-
     Route::get('inside-mware', function () {
        return response()->json('Success', 200);
     });
